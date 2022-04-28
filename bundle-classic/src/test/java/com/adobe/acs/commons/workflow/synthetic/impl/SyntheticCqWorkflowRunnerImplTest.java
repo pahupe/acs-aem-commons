@@ -38,6 +38,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import javax.jcr.Session;
@@ -150,7 +151,7 @@ public class SyntheticCqWorkflowRunnerImplTest {
         Map<Object, Object> map = new HashMap<Object, Object>();
 
         map.put("process.label", "restart");
-        RestartWorkflowProcess restartWorkflowProcess = spy(new RestartWorkflowProcess());
+        RestartWorkflowProcess restartWorkflowProcess = Mockito.spy(new RestartWorkflowProcess());
         swr.bindCqWorkflowProcesses(restartWorkflowProcess, map);
 
         /** Restart */
@@ -172,7 +173,7 @@ public class SyntheticCqWorkflowRunnerImplTest {
         Map<Object, Object> map = new HashMap<Object, Object>();
 
         map.put("process.label", "terminate");
-        TerminateDataWorkflowProcess terminateDataWorkflowProcess = spy(new TerminateDataWorkflowProcess());
+        TerminateDataWorkflowProcess terminateDataWorkflowProcess = Mockito.spy(new TerminateDataWorkflowProcess());
         swr.bindCqWorkflowProcesses(terminateDataWorkflowProcess, map);
 
         map.put("process.label", "nonext");
@@ -196,7 +197,7 @@ public class SyntheticCqWorkflowRunnerImplTest {
         Map<Object, Object> map = new HashMap<Object, Object>();
 
         map.put("process.label", "terminate");
-        TerminateDataWorkflowProcess terminateDataWorkflowProcess = spy(new TerminateDataWorkflowProcess());
+        TerminateDataWorkflowProcess terminateDataWorkflowProcess = Mockito.spy(new TerminateDataWorkflowProcess());
         swr.bindCqWorkflowProcesses(terminateDataWorkflowProcess, map);
 
         workflowSteps.add(swr.getSyntheticWorkflowStep("terminate",
@@ -218,7 +219,7 @@ public class SyntheticCqWorkflowRunnerImplTest {
         Map<Object, Object> map = new HashMap<Object, Object>();
 
         map.put("process.label", "terminate");
-        TerminateDataWorkflowProcess terminateDataWorkflowProcess = spy(new TerminateDataWorkflowProcess());
+        TerminateDataWorkflowProcess terminateDataWorkflowProcess = Mockito.spy(new TerminateDataWorkflowProcess());
         swr.bindCqWorkflowProcesses(terminateDataWorkflowProcess, map);
 
         workflowSteps.add(swr.getSyntheticWorkflowStep("terminate",

@@ -291,7 +291,11 @@
 
         <!-- ======================== -->
         <!-- START build dependencies -->
-        <!-- Only list 'provided' dependencies -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation.versioning</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.annotation.bundle</artifactId>

@@ -210,7 +210,6 @@
                 <groupId>${project.groupId}</groupId>
                 <artifactId>acs-aem-commons-bundle-shared</artifactId>
                 <version>${project.version}</version>
-                <scope>compile</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -222,12 +221,7 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>acs-aem-commons-bundle-shared</artifactId>
             <version>${project.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.google.guava</groupId>
-                    <artifactId>guava</artifactId>
-                </exclusion>
-            </exclusions>
+            <scope>compile</scope>
         </dependency>
 
         <!-- ======================= -->
@@ -297,7 +291,11 @@
 
         <!-- ======================== -->
         <!-- START build dependencies -->
-        <!-- Only list 'provided' dependencies -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation.versioning</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.annotation.bundle</artifactId>
