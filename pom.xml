@@ -821,7 +821,9 @@ Bundle-DocURL: https://adobe-consulting-services.github.io/acs-aem-commons/
     </distributionManagement>
 
     <modules>
-        <module>bundle</module>
+        <module>bundle-shared</module>
+        <module>bundle-classic</module>
+        <module>bundle-cloudservice</module>
         <module>oakpal-checks</module>
         <module>ui.apps</module>
         <module>ui.content</module>
